@@ -33,6 +33,7 @@ public class DeviceAuthorizationGrantCacheEntry extends CacheEntry {
     private Map<ClaimMapping, String> userAttributes;
     private Map<ClaimMapping, String> mappedRemoteClaims;
     private String impersonator;
+    private String sessionContextIdentifier;
 
     public DeviceAuthorizationGrantCacheEntry(Map<ClaimMapping, String> userAttributes) {
 
@@ -78,5 +79,15 @@ public class DeviceAuthorizationGrantCacheEntry extends CacheEntry {
     public void setImpersonator(String impersonator) {
 
         this.impersonator = impersonator;
+    }
+
+    public String getSessionContextIdentifier() {
+
+        return sessionContextIdentifier;
+    }
+
+    public void setSessionContextIdentifier(String sessionContextIdentifier) {
+
+        this.sessionContextIdentifier = sessionContextIdentifier;
     }
 }

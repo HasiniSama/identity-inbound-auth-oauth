@@ -4862,6 +4862,7 @@ public class AuthzUtil {
         if (oAuthMessage.getProperty(IMPERSONATING_ACTOR) != null) {
             cacheEntry.setImpersonator(oAuthMessage.getProperty(IMPERSONATING_ACTOR).toString());
         }
+        cacheEntry.setSessionContextIdentifier(sessionDataCacheEntry.getSessionContextIdentifier());
 
         DeviceAuthorizationGrantCache.getInstance().addToCache(cacheKey, cacheEntry);
     }
